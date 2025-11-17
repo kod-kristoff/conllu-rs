@@ -31,36 +31,33 @@ impl<R: io::BufRead> Iterator for SentenceGenerator<R> {
     type Item = Result<Sentence, io::Error>;
 
     fn next(&mut self) -> Option<Self::Item> {
-        loop {
-            if let Some(sentence) = self.sentences.next() {
-                let sentence = match sentence {
-                    Ok(x) => x,
-                    Err(err) => return Some(Err(err)),
-                };
-                let mut curr_metadata = Vec::new();
-                let mut curr_sentence = Vec::new();
-                for line in sentence {
-                    //     let line = match line {
-                    //         Ok(x) => x,
-                    //         Err(err) => return Some(Err(err)),
-                    //     };
-                    if line.starts_with('#') {
-                        if line.starts_with("# global.columns = ") {
-                            if let Some(gc) = line.split_once('=').map(|x| x.1) {
-                                self.global_columns =
-                                    gc.trim().split(' ').map(ToString::to_string).collect();
-                            }
+        if let Some(sentence) = self.sentences.next() {
+            let sentence = match sentence {
+                Ok(x) => x,
+                Err(err) => return Some(Err(err)),
+            };
+            let mut curr_metadata = Vec::new();
+            let mut curr_sentence = Vec::new();
+            for line in sentence {
+                //     let line = match line {
+                //         Ok(x) => x,
+                //         Err(err) => return Some(Err(err)),
+                //     };
+                if line.starts_with('#') {
+                    if line.starts_with("# global.columns = ") {
+                        if let Some(gc) = line.split_once('=').map(|x| x.1) {
+                            self.global_columns =
+                                gc.trim().split(' ').map(ToString::to_string).collect();
                         }
-                        curr_metadata.push(line.strip_prefix("#").unwrap().to_string());
-                    } else {
-                        curr_sentence.push(line);
                     }
+                    curr_metadata.push(line.strip_prefix("#").unwrap().to_string());
+                } else {
+                    curr_sentence.push(line);
                 }
-                return Some(Ok(parse_token_and_metadata(curr_metadata, curr_sentence)));
-            } else {
-                break;
             }
+            return Some(Ok(parse_token_and_metadata(curr_metadata, curr_sentence)));
         }
+
         None
     }
 }
