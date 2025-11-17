@@ -1,7 +1,4 @@
-use std::{
-    io::{self, Lines},
-    mem,
-};
+use std::io;
 
 use crate::{
     models::Sentence,
@@ -9,6 +6,14 @@ use crate::{
 };
 
 mod parser;
+
+pub fn parse<R: io::BufRead>(in_file: R) -> Result<Vec<Sentence>, io::Error> {
+    let mut sentences = Vec::new();
+    for sentence in parse_incr(in_file) {
+        sentences.push(sentence?);
+    }
+    Ok(sentences)
+}
 
 pub fn parse_incr<R: io::BufRead>(in_file: R) -> impl Iterator<Item = Result<Sentence, io::Error>> {
     SentenceGenerator {
