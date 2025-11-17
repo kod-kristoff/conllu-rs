@@ -15,8 +15,18 @@ import conllu
 
 
 FIELDS: list[str] = ["id", "form"]
-OPT_FIELDS: list[str] = ["lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc"]
-I: str = " "*4
+OPT_FIELDS: list[str] = [
+    "lemma",
+    "upos",
+    "xpos",
+    "feats",
+    "head",
+    "deprel",
+    "deps",
+    "misc",
+]
+I: str = " " * 4
+
 
 def main() -> None:
     case_path = Path(sys.argv[1])
@@ -32,31 +42,31 @@ def dump_snap(case_path: Path) -> None:
     d = 1
     with case_path.open(encoding="utf-8") as fp:
         for sentence in conllu.parse_incr(fp):
-            print(f"{I*d}Sentence {{")
+            print(f"{I * d}Sentence {{")
             d += 1
-            print(f"{I*d}tokens: [")
+            print(f"{I * d}tokens: [")
             d += 1
             for token in sentence:
-                print(f"{I*d}Token {{")
+                print(f"{I * d}Token {{")
                 d += 1
                 for k in FIELDS:
                     v = token.get(k)
-                    print(f"{I*d}{k}: {_fmt(v,d+1)},")
+                    print(f"{I * d}{k}: {_fmt(v, d + 1)},")
                 for k in OPT_FIELDS:
                     v = token.get(k)
-                    print(f"{I*d}{k}: {_fmt_opt(v,d+1)},")
+                    print(f"{I * d}{k}: {_fmt_opt(v, d + 1)},")
                 d -= 1
-                print(f"{I*d}}},")
+                print(f"{I * d}}},")
             d -= 1
-            print(f"{I*d}],")
+            print(f"{I * d}],")
             if sentence.metadata:
-                print(f"{I*d}metadata: {_fmt(sentence.metadata, d+1)},")
+                print(f"{I * d}metadata: {_fmt(sentence.metadata, d + 1)},")
             else:
-                print(f"{I*d}metadata: {{}},")
+                print(f"{I * d}metadata: {{}},")
             d -= 1
-            print(f"{I*d}}},")
+            print(f"{I * d}}},")
         d -= 1
-        print(f"{I*d}]")
+        print(f"{I * d}]")
 
 
 def _fmt(v: t.Any, d: int) -> str:
@@ -64,28 +74,28 @@ def _fmt(v: t.Any, d: int) -> str:
         if not v:
             return "{}"
         res = "{\n"
-        for k,v1 in sorted(v.items()):
-            res += f"{I*d}\"{k}\": {_fmt(v1, d+1)},\n"
-        res += f"{I*(d-1)}}}"
+        for k, v1 in sorted(v.items()):
+            res += f'{I * d}"{k}": {_fmt(v1, d + 1)},\n'
+        res += f"{I * (d - 1)}}}"
         return res
     if isinstance(v, list):
         if not v:
             return "[]"
         res = "[\n"
         for v2 in v:
-            res += f"{I*d}{_fmt(v2, d)},\n"
-        res += f"{I*(d-1)}]"
+            res += f"{I * d}{_fmt(v2, d)},\n"
+        res += f"{I * (d - 1)}]"
         return res
     if isinstance(v, tuple):
         if isinstance(v[0], int):
             return f"{v[0]}{v[1]}{v[2]}"
         res = "(\n"
         for v2 in v:
-            res += f"{I*(d+1)}{_fmt(v2, d+1)},\n"
-        res += f"{I*(d)})"
+            res += f"{I * (d + 1)}{_fmt(v2, d + 1)},\n"
+        res += f"{I * (d)})"
         return res
     if isinstance(v, str):
-        return f"\"{v}\""
+        return f'"{v}"'
     return str(v)
 
 
@@ -94,11 +104,11 @@ def _fmt_opt(v: t.Any | None, d: int) -> str:
         return str(v)
     if v == "_":
         return str(None)
-    return f"Some(\n{I*d}{_fmt(v,d+1)},\n{I*(d-1)})"
+    return f"Some(\n{I * d}{_fmt(v, d + 1)},\n{I * (d - 1)})"
     if isinstance(v, tuple):
         return f"{v[0]}{v[1]}{v[2]}"
     if isinstance(v, str):
-        return f"\"{v}\""
+        return f'"{v}"'
     return str(v)
 
 
