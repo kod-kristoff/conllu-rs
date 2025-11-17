@@ -1,0 +1,303 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Er",
+                lemma: Some(
+                    "er",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "arbeitet",
+                lemma: Some(
+                    "arbeiten",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3-4,
+                form: "fürs",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "für",
+                lemma: Some(
+                    "für",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "das",
+                lemma: Some(
+                    "der",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "FBI",
+                lemma: Some(
+                    "FBI",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "(",
+                lemma: Some(
+                    "(",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 7,
+                form: "deutsch",
+                lemma: Some(
+                    "deutsch",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "etwa",
+                lemma: Some(
+                    "etwa",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 9,
+                form: ":",
+                lemma: Some(
+                    ":",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 10,
+                form: "„",
+                lemma: Some(
+                    "„",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 11,
+                form: "Bundesamt",
+                lemma: Some(
+                    "Bundesamt",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 12,
+                form: "für",
+                lemma: Some(
+                    "für",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 13,
+                form: "Ermittlung",
+                lemma: Some(
+                    "Ermittlung",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 14,
+                form: "“",
+                lemma: Some(
+                    "“",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 15,
+                form: ")",
+                lemma: Some(
+                    ")",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 16,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+        ],
+        metadata: {},
+    },
+]

@@ -1,0 +1,105 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1-2,
+                form: "vámonos",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 1,
+                form: "vamos",
+                lemma: Some(
+                    "ir",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "nos",
+                lemma: Some(
+                    "nosotros",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3-4,
+                form: "al",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "a",
+                lemma: Some(
+                    "a",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "el",
+                lemma: Some(
+                    "el",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "mar",
+                lemma: Some(
+                    "mar",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+        ],
+        metadata: {},
+    },
+]

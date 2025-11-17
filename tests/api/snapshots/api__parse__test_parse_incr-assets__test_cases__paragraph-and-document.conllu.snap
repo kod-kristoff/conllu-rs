@@ -1,0 +1,188 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Slovenská",
+                lemma: Some(
+                    "slovenský",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "AAFS1----1A----",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Degree": "Pos",
+                        "Gender": "Fem",
+                        "Number": "Sing",
+                        "Polarity": "Pos",
+                    },
+                ),
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "ústava",
+                lemma: Some(
+                    "ústava",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NNFS1-----A----",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Gender": "Fem",
+                        "Number": "Sing",
+                        "Polarity": "Pos",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 3,
+                form: ":",
+                lemma: Some(
+                    ":",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "Z:-------------",
+                ),
+                feats: None,
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "pro",
+                lemma: Some(
+                    "pro",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "RR--4----------",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Acc",
+                    },
+                ),
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "appos",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "LId": "pro-1",
+                    },
+                ),
+            },
+            Token {
+                id: 5,
+                form: "i",
+                lemma: Some(
+                    "i",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: Some(
+                    "J^-------------",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "cc",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "LId": "i-1",
+                    },
+                ),
+            },
+            Token {
+                id: 6,
+                form: "proti",
+                lemma: Some(
+                    "proti",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "RR--3----------",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Dat",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "LId": "proti-1",
+                    },
+                ),
+            },
+        ],
+        metadata: {
+            "newdoc id": "mf920901-001",
+            "newpar id": "mf920901-001-p1",
+            "sent_id": "mf920901-001-p1s1A",
+            "text": "Slovenská ústava: pro i proti",
+            "text_en": "Slovak constitution: pros and cons",
+        },
+    },
+]

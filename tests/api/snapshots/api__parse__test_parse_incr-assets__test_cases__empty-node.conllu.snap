@@ -1,0 +1,109 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Sue",
+                lemma: Some(
+                    "Sue",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "likes",
+                lemma: Some(
+                    "like",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "coffee",
+                lemma: Some(
+                    "coffee",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "and",
+                lemma: Some(
+                    "and",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "Bill",
+                lemma: Some(
+                    "Bill",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 5.1,
+                form: "likes",
+                lemma: Some(
+                    "like",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "tea",
+                lemma: Some(
+                    "tea",
+                ),
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+        ],
+        metadata: {},
+    },
+]

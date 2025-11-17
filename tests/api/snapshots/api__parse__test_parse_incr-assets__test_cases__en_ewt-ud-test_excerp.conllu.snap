@@ -1,0 +1,4498 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "What",
+                lemma: Some(
+                    "what",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "WP",
+                ),
+                feats: Some(
+                    {
+                        "PronType": "Int",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "Conditional-Interrogative",
+                        "CxnElt": "1:Conditional-Interrogative.Apodosis",
+                    },
+                ),
+            },
+            Token {
+                id: 2,
+                form: "if",
+                lemma: Some(
+                    "if",
+                ),
+                upos: Some(
+                    "SCONJ",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "mark",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "mark",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "Google",
+                lemma: Some(
+                    "Google",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "Morphed",
+                lemma: Some(
+                    "morph",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBD",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Past",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    1,
+                ),
+                deprel: Some(
+                    "advcl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advcl:if",
+                            1,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "CxnElt": "1:Conditional-Interrogative.Protasis",
+                    },
+                ),
+            },
+            Token {
+                id: 5,
+                form: "Into",
+                lemma: Some(
+                    "into",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "GoogleOS",
+                lemma: Some(
+                    "GoogleOS",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:into",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 7,
+                form: "?",
+                lemma: Some(
+                    "?",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "newdoc id": "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200",
+            "newpar id": "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-p0001",
+            "sent_id": "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0001",
+            "text": "What if Google Morphed Into GoogleOS?",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "What",
+                lemma: Some(
+                    "what",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "WP",
+                ),
+                feats: Some(
+                    {
+                        "PronType": "Int",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "Conditional-Interrogative",
+                        "CxnElt": "1:Conditional-Interrogative.Apodosis",
+                    },
+                ),
+            },
+            Token {
+                id: 2,
+                form: "if",
+                lemma: Some(
+                    "if",
+                ),
+                upos: Some(
+                    "SCONJ",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "mark",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "mark",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "Google",
+                lemma: Some(
+                    "Google",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "expanded",
+                lemma: Some(
+                    "expand",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBD",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Past",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    1,
+                ),
+                deprel: Some(
+                    "advcl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advcl:if",
+                            1,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "CxnElt": "1:Conditional-Interrogative.Protasis",
+                    },
+                ),
+            },
+            Token {
+                id: 5,
+                form: "on",
+                lemma: Some(
+                    "on",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    15,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            15,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "its",
+                lemma: Some(
+                    "its",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "PRP$",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Gen",
+                        "Gender": "Neut",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Poss": "Yes",
+                        "PronType": "Prs",
+                    },
+                ),
+                head: Some(
+                    15,
+                ),
+                deprel: Some(
+                    "nmod:poss",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nmod:poss",
+                            15,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "search",
+                lemma: Some(
+                    "search",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    9,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            9,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 8,
+                form: "-",
+                lemma: Some(
+                    "-",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "HYPH",
+                ),
+                feats: None,
+                head: Some(
+                    7,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            7,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 9,
+                form: "engine",
+                lemma: Some(
+                    "engine",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    15,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            15,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 10,
+                form: "(",
+                lemma: Some(
+                    "(",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "-LRB-",
+                ),
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            13,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 11,
+                form: "and",
+                lemma: Some(
+                    "and",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: Some(
+                    "CC",
+                ),
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "cc",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cc",
+                            13,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 12,
+                form: "now",
+                lemma: Some(
+                    "now",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: Some(
+                    {
+                        "PronType": "Dem",
+                    },
+                ),
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            13,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 13,
+                form: "e-mail",
+                lemma: Some(
+                    "e-mail",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    9,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "conj:and",
+                            9,
+                        ),
+                        (
+                            "compound",
+                            15,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 14,
+                form: ")",
+                lemma: Some(
+                    ")",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "-RRB-",
+                ),
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            13,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 15,
+                form: "wares",
+                lemma: Some(
+                    "wares",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NNS",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Ptan",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:on",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 16,
+                form: "into",
+                lemma: Some(
+                    "into",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    22,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            22,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 17,
+                form: "a",
+                lemma: Some(
+                    "a",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Ind",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    22,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            22,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 18,
+                form: "full",
+                lemma: Some(
+                    "full",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    20,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            20,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 19,
+                form: "-",
+                lemma: Some(
+                    "-",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "HYPH",
+                ),
+                feats: None,
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 20,
+                form: "fledged",
+                lemma: Some(
+                    "fledged",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    22,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "amod",
+                            22,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 21,
+                form: "operating",
+                lemma: Some(
+                    "operating",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    22,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            22,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 22,
+                form: "system",
+                lemma: Some(
+                    "system",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:into",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 23,
+                form: "?",
+                lemma: Some(
+                    "?",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0002",
+            "text": "What if Google expanded on its search-engine (and now e-mail) wares into a full-fledged operating system?",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "[",
+                lemma: Some(
+                    "[",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "-LRB-",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 2,
+                form: "via",
+                lemma: Some(
+                    "via",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "Microsoft",
+                lemma: Some(
+                    "Microsoft",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "Watch",
+                lemma: Some(
+                    "Watch",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "from",
+                lemma: Some(
+                    "from",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "Mary",
+                lemma: Some(
+                    "Mary",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "nmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nmod:from",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "Jo",
+                lemma: Some(
+                    "Jo",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "flat",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "flat",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "Foley",
+                lemma: Some(
+                    "Foley",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "flat",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "flat",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 9,
+                form: "]",
+                lemma: Some(
+                    "]",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "-RRB-",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0003",
+            "text": "[via Microsoft Watch from Mary Jo Foley ]",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "(",
+                lemma: Some(
+                    "(",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "-LRB-",
+                ),
+                feats: None,
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 2,
+                form: "And",
+                lemma: Some(
+                    "and",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: Some(
+                    "CC",
+                ),
+                feats: None,
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "cc",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cc",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 3,
+                form: ",",
+                lemma: Some(
+                    ",",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ",",
+                ),
+                feats: None,
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "by",
+                lemma: Some(
+                    "by",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "the",
+                lemma: Some(
+                    "the",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Def",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "way",
+                lemma: Some(
+                    "way",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:by",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 7,
+                form: ",",
+                lemma: Some(
+                    ",",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ",",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "is",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "cop",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cop",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 9,
+                form: "anybody",
+                lemma: Some(
+                    "anybody",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Ind",
+                    },
+                ),
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 10,
+                form: "else",
+                lemma: Some(
+                    "else",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    9,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            9,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 11,
+                form: "just",
+                lemma: Some(
+                    "just",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            13,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 12,
+                form: "a",
+                lemma: Some(
+                    "a",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Ind",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            13,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 13,
+                form: "little",
+                lemma: Some(
+                    "little",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "obl:unmarked",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:unmarked",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 14,
+                form: "nostalgic",
+                lemma: Some(
+                    "nostalgic",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "Interrogative-Polar-Direct",
+                        "CxnElt": "14:Interrogative-Polar-Direct.Clause",
+                    },
+                ),
+            },
+            Token {
+                id: 15,
+                form: "for",
+                lemma: Some(
+                    "for",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    17,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            17,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 16,
+                form: "the",
+                lemma: Some(
+                    "the",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Def",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    17,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            17,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 17,
+                form: "days",
+                lemma: Some(
+                    "day",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NNS",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Plur",
+                    },
+                ),
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:for",
+                            14,
+                        ),
+                        (
+                            "obl:unmarked",
+                            23,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 18,
+                form: "when",
+                lemma: Some(
+                    "when",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "WRB",
+                ),
+                feats: Some(
+                    {
+                        "PronType": "Rel",
+                    },
+                ),
+                head: Some(
+                    23,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "ref",
+                            17,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 19,
+                form: "that",
+                lemma: Some(
+                    "that",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Dem",
+                    },
+                ),
+                head: Some(
+                    23,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            23,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 20,
+                form: "was",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBD",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Past",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    23,
+                ),
+                deprel: Some(
+                    "cop",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cop",
+                            23,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 21,
+                form: "a",
+                lemma: Some(
+                    "a",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Ind",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    23,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            23,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 22,
+                form: "good",
+                lemma: Some(
+                    "good",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    23,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "amod",
+                            23,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 23,
+                form: "thing",
+                lemma: Some(
+                    "thing",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    17,
+                ),
+                deprel: Some(
+                    "acl:relcl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "acl:relcl",
+                            17,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "rc-wh-obl:unmarked",
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 24,
+                form: "?",
+                lemma: Some(
+                    "?",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 25,
+                form: ")",
+                lemma: Some(
+                    ")",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "-RRB-",
+                ),
+                feats: None,
+                head: Some(
+                    14,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            14,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "newdoc id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700",
+            "newpar id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-p0001",
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0001",
+            "text": "(And, by the way, is anybody else just a little nostalgic for the days when that was a good thing?)",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "This",
+                lemma: Some(
+                    "this",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Dem",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "BuzzMachine",
+                lemma: Some(
+                    "BuzzMachine",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "post",
+                lemma: Some(
+                    "post",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "argues",
+                lemma: Some(
+                    "argue",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "that",
+                lemma: Some(
+                    "that",
+                ),
+                upos: Some(
+                    "SCONJ",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    12,
+                ),
+                deprel: Some(
+                    "mark",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "mark",
+                            12,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6-7,
+                form: "Google's",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "Google",
+                lemma: Some(
+                    "Google",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    8,
+                ),
+                deprel: Some(
+                    "nmod:poss",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nmod:poss",
+                            8,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "'s",
+                lemma: Some(
+                    "'s",
+                ),
+                upos: Some(
+                    "PART",
+                ),
+                xpos: Some(
+                    "POS",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "rush",
+                lemma: Some(
+                    "rush",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    12,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            12,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 9,
+                form: "toward",
+                lemma: Some(
+                    "toward",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    10,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            10,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 10,
+                form: "ubiquity",
+                lemma: Some(
+                    "ubiquity",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    8,
+                ),
+                deprel: Some(
+                    "nmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nmod:toward",
+                            8,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 11,
+                form: "might",
+                lemma: Some(
+                    "might",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "MD",
+                ),
+                feats: Some(
+                    {
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    12,
+                ),
+                deprel: Some(
+                    "aux",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "aux",
+                            12,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 12,
+                form: "backfire",
+                lemma: Some(
+                    "backfire",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VB",
+                ),
+                feats: Some(
+                    {
+                        "VerbForm": "Inf",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "ccomp",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "ccomp",
+                            4,
+                        ),
+                        (
+                            "ccomp",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 13,
+                form: "--",
+                lemma: Some(
+                    "--",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ",",
+                ),
+                feats: None,
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 14,
+                form: "which",
+                lemma: Some(
+                    "which",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "WDT",
+                ),
+                feats: Some(
+                    {
+                        "PronType": "Rel",
+                    },
+                ),
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "obj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "ref",
+                            12,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 15-16,
+                form: "we've",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 15,
+                form: "we",
+                lemma: Some(
+                    "we",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "PRP",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Number": "Plur",
+                        "Person": "1",
+                        "PronType": "Prs",
+                    },
+                ),
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 16,
+                form: "'ve",
+                lemma: Some(
+                    "have",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBP",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Plur",
+                        "Person": "1",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "aux",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "aux",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 17,
+                form: "all",
+                lemma: Some(
+                    "all",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 18,
+                form: "heard",
+                lemma: Some(
+                    "hear",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBN",
+                ),
+                feats: Some(
+                    {
+                        "Tense": "Past",
+                        "VerbForm": "Part",
+                    },
+                ),
+                head: Some(
+                    12,
+                ),
+                deprel: Some(
+                    "advcl:relcl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advcl:relcl",
+                            12,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "rc-wh-ccomp",
+                    },
+                ),
+            },
+            Token {
+                id: 19,
+                form: "before",
+                lemma: Some(
+                    "before",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    18,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            18,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 20,
+                form: ",",
+                lemma: Some(
+                    ",",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ",",
+                ),
+                feats: None,
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 21,
+                form: "but",
+                lemma: Some(
+                    "but",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: Some(
+                    "CC",
+                ),
+                feats: None,
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "cc",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cc",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 22-23,
+                form: "it's",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 22,
+                form: "it",
+                lemma: Some(
+                    "it",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "PRP",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Gender": "Neut",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "PronType": "Prs",
+                    },
+                ),
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "nsubj:pass",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj:pass",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 23,
+                form: "'s",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "aux:pass",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "aux:pass",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 24,
+                form: "particularly",
+                lemma: Some(
+                    "particularly",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 25,
+                form: "well",
+                lemma: Some(
+                    "well",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 26,
+                form: "-",
+                lemma: Some(
+                    "-",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    "HYPH",
+                ),
+                feats: None,
+                head: Some(
+                    25,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            25,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 27,
+                form: "put",
+                lemma: Some(
+                    "put",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBN",
+                ),
+                feats: Some(
+                    {
+                        "Tense": "Past",
+                        "VerbForm": "Part",
+                        "Voice": "Pass",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "conj:but",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 28,
+                form: "in",
+                lemma: Some(
+                    "in",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    30,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            30,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 29,
+                form: "this",
+                lemma: Some(
+                    "this",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Dem",
+                    },
+                ),
+                head: Some(
+                    30,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            30,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 30,
+                form: "post",
+                lemma: Some(
+                    "post",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    27,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:in",
+                            27,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 31,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0002",
+            "text": "This BuzzMachine post argues that Google's rush toward ubiquity might backfire -- which we've all heard before, but it's particularly well-put in this post.",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Google",
+                lemma: Some(
+                    "Google",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "is",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "cop",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cop",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "a",
+                lemma: Some(
+                    "a",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Ind",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "nice",
+                lemma: Some(
+                    "nice",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "amod",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "search",
+                lemma: Some(
+                    "search",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "engine",
+                lemma: Some(
+                    "engine",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 7,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0003",
+            "text": "Google is a nice search engine.",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Does",
+                lemma: Some(
+                    "do",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "aux",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "aux",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "anybody",
+                lemma: Some(
+                    "anybody",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Ind",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "use",
+                lemma: Some(
+                    "use",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VB",
+                ),
+                feats: Some(
+                    {
+                        "VerbForm": "Inf",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "Interrogative-Polar-Direct",
+                        "CxnElt": "3:Interrogative-Polar-Direct.Clause",
+                    },
+                ),
+            },
+            Token {
+                id: 4,
+                form: "it",
+                lemma: Some(
+                    "it",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "PRP",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Acc",
+                        "Gender": "Neut",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "PronType": "Prs",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "obj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obj",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "for",
+                lemma: Some(
+                    "for",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "anything",
+                lemma: Some(
+                    "anything",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Ind",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:for",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "else",
+                lemma: Some(
+                    "else",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            6,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 8,
+                form: "?",
+                lemma: Some(
+                    "?",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0004",
+            "text": "Does anybody use it for anything else?",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "They",
+                lemma: Some(
+                    "they",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "PRP",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Number": "Plur",
+                        "Person": "3",
+                        "PronType": "Prs",
+                    },
+                ),
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "own",
+                lemma: Some(
+                    "own",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBP",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Plur",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "blogger",
+                lemma: Some(
+                    "blogger",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "obj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obj",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 4,
+                form: ",",
+                lemma: Some(
+                    ",",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ",",
+                ),
+                feats: None,
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "of",
+                lemma: Some(
+                    "of",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: Some(
+                    {
+                        "ExtPos": "ADV",
+                    },
+                ),
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "course",
+                lemma: Some(
+                    "course",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "fixed",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "fixed",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 7,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0005",
+            "text": "They own blogger, of course.",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Is",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "cop",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cop",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "that",
+                lemma: Some(
+                    "that",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                        "PronType": "Dem",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "a",
+                lemma: Some(
+                    "a",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Ind",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "money",
+                lemma: Some(
+                    "money",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "compound",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "compound",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "maker",
+                lemma: Some(
+                    "maker",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "Cxn": "Interrogative-Polar-Direct",
+                        "CxnElt": "5:Interrogative-Polar-Direct.Clause",
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 6,
+                form: "?",
+                lemma: Some(
+                    "?",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0006",
+            "text": "Is that a money maker?",
+        },
+    },
+    Sentence {
+        tokens: [
+            Token {
+                id: 1-2,
+                form: "I'm",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 1,
+                form: "I",
+                lemma: Some(
+                    "I",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: Some(
+                    "PRP",
+                ),
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Number": "Sing",
+                        "Person": "1",
+                        "PronType": "Prs",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "'m",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBP",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "1",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "aux",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "aux",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "staying",
+                lemma: Some(
+                    "stay",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBG",
+                ),
+                feats: Some(
+                    {
+                        "Tense": "Pres",
+                        "VerbForm": "Part",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "away",
+                lemma: Some(
+                    "away",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "from",
+                lemma: Some(
+                    "from",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    7,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            7,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "the",
+                lemma: Some(
+                    "the",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Def",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    7,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "det",
+                            7,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "stock",
+                lemma: Some(
+                    "stock",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:from",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 8,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: {
+            "newpar id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-p0002",
+            "sent_id": "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0007",
+            "text": "I'm staying away from the stock.",
+        },
+    },
+]

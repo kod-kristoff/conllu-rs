@@ -1,0 +1,522 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "På",
+                lemma: Some(
+                    "på",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "högstadiet",
+                lemma: Some(
+                    "högstadium",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "skall",
+                lemma: Some(
+                    "skola",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "aux",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "varje",
+                lemma: Some(
+                    "varje",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "elev",
+                lemma: Some(
+                    "elev",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "välja",
+                lemma: Some(
+                    "välja",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "ett",
+                lemma: Some(
+                    "en",
+                ),
+                upos: Some(
+                    "NUM",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    6,
+                ),
+                deprel: Some(
+                    "obj",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "av",
+                lemma: Some(
+                    "av",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    10,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 9,
+                form: "fyra",
+                lemma: Some(
+                    "fyra",
+                ),
+                upos: Some(
+                    "NUM",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    10,
+                ),
+                deprel: Some(
+                    "nummod",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 10,
+                form: "tillvalsämnen",
+                lemma: Some(
+                    "tillvalsämne",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    7,
+                ),
+                deprel: Some(
+                    "nmod",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 11,
+                form: ":",
+                lemma: Some(
+                    ":",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    10,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 12,
+                form: "*",
+                lemma: Some(
+                    "*",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "NewPar": "Yes",
+                    },
+                ),
+            },
+            Token {
+                id: 13,
+                form: "språk",
+                lemma: Some(
+                    "språk",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    10,
+                ),
+                deprel: Some(
+                    "appos",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 14,
+                form: "(",
+                lemma: Some(
+                    "(",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 15,
+                form: "franska",
+                lemma: Some(
+                    "fransk",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "appos",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 16,
+                form: "eller",
+                lemma: Some(
+                    "eller",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    17,
+                ),
+                deprel: Some(
+                    "cc",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 17,
+                form: "tyska",
+                lemma: Some(
+                    "tysk",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    15,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 18,
+                form: ")",
+                lemma: Some(
+                    ")",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 19,
+                form: "*",
+                lemma: Some(
+                    "*",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    20,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "NewPar": "Yes",
+                    },
+                ),
+            },
+            Token {
+                id: 20,
+                form: "ekonomi",
+                lemma: Some(
+                    "ekonomi",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 21,
+                form: "*",
+                lemma: Some(
+                    "*",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    22,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "NewPar": "Yes",
+                    },
+                ),
+            },
+            Token {
+                id: 22,
+                form: "teknik",
+                lemma: Some(
+                    "teknik",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 23,
+                form: "*",
+                lemma: Some(
+                    "*",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    24,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "NewPar": "Yes",
+                    },
+                ),
+            },
+            Token {
+                id: 24,
+                form: "konst",
+                lemma: Some(
+                    "konst",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    13,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: None,
+                misc: None,
+            },
+        ],
+        metadata: {
+            "sent_id": "sv-ud-train-477",
+            "text": "På högstadiet skall varje elev välja ett av fyra tillvalsämnen: * språk (franska eller tyska) * ekonomi * teknik * konst",
+        },
+    },
+]
