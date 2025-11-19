@@ -1,8 +1,16 @@
-use std::{collections::HashMap, fmt};
+use std::fmt;
 
-pub type Dict<K, V> = vec_btree_map::VecBTreeMap<K, V>;
+mod ser;
 
-pub type Metadata = Dict<String, String>;
+pub type Dict<K, V> = ordermap::OrderMap<K, V>;
+
+pub type Metadata = Vec<MetadataOrComment>;
+
+#[derive(Debug, Clone, PartialEq)]
+pub enum MetadataOrComment {
+    Comment(String),
+    Metadata { key: String, value: String },
+}
 
 #[derive(Clone, Copy, PartialEq)]
 pub enum Id {
@@ -11,8 +19,8 @@ pub enum Id {
     Dot(u8, u8),
 }
 
-impl fmt::Debug for Id {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+impl Id {
+    fn do_fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
             Self::Single(id) => f.write_fmt(format_args!("{}", id)),
             Self::Range(from, to) => f.write_fmt(format_args!("{}-{}", from, to)),
@@ -20,13 +28,15 @@ impl fmt::Debug for Id {
         }
     }
 }
+
+impl fmt::Debug for Id {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        self.do_fmt(f)
+    }
+}
 impl fmt::Display for Id {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            Self::Single(id) => f.write_fmt(format_args!("{}", id)),
-            Self::Range(from, to) => f.write_fmt(format_args!("{}-{}", from, to)),
-            Self::Dot(major, minor) => f.write_fmt(format_args!("{}.{}", major, minor)),
-        }
+        self.do_fmt(f)
     }
 }
 #[derive(Debug, Clone)]
@@ -170,13 +180,15 @@ impl fmt::Display for Sentence {
         if !self.metadata.is_empty() {
             f.write_str(", metdata={{")?;
             let mut write_comma = false;
-            for (k, v) in self.metadata.iter() {
-                if write_comma {
-                    f.write_str(", ")?;
-                } else {
-                    write_comma = true;
+            for meta_or_comm in self.metadata.iter() {
+                if let MetadataOrComment::Metadata { key, value } = meta_or_comm {
+                    if write_comma {
+                        f.write_str(", ")?;
+                    } else {
+                        write_comma = true;
+                    }
+                    f.write_fmt(format_args!("{}=\"{:?}\"", key, value))?;
                 }
-                f.write_fmt(format_args!("{}=\"{:?}\"", k, v))?;
             }
             f.write_str("}}")?;
         }

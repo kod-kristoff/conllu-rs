@@ -6,7 +6,7 @@ use std::{
 
 use regex::Regex;
 
-use crate::models::{Dict, Id, Sentence, Token};
+use crate::models::{Dict, Id, MetadataOrComment, Sentence, Token};
 
 const DEFAULT_FIELDS: &[&str] = &[
     "id", "form", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc",
@@ -31,12 +31,14 @@ pub(super) fn parse_token_and_metadata(
     token_lines: Vec<String>,
 ) -> Sentence {
     let mut tokens = vec![];
-    let mut metadata = Dict::new();
+    let mut metadata = Vec::new();
 
     for line in metadata_lines {
         for (key, value) in parse_comment_line(line) {
             if let Some(value) = value {
-                metadata.insert(key, value);
+                metadata.push(MetadataOrComment::Metadata { key, value });
+            } else {
+                metadata.push(MetadataOrComment::Comment(key));
             }
         }
     }
@@ -89,7 +91,7 @@ fn parse_line(line: String) -> Token {
 }
 fn parse_comment_line(line: String) -> Vec<(String, Option<String>)> {
     let (key, value) = parse_pair_value(line);
-    if key.is_empty() || value.is_none() {
+    if key.is_empty() {
         vec![]
     } else {
         vec![(key, value)]
