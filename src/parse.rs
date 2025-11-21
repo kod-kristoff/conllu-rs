@@ -1,7 +1,7 @@
 use std::io;
 
 use crate::{
-    models::Sentence,
+    models::{Sentence, TokenTree},
     parse::parser::{SentenceIter, parse_sentences, parse_token_and_metadata},
 };
 
@@ -19,6 +19,25 @@ pub fn parse_incr<R: io::BufRead>(in_file: R) -> impl Iterator<Item = Result<Sen
     SentenceGenerator {
         sentences: parse_sentences(in_file),
         global_columns: Vec::new(),
+    }
+}
+
+pub fn parse_tree<R: io::BufRead>(in_file: R) -> Result<Vec<TokenTree>, io::Error> {
+    let mut token_trees = vec![];
+    for token_tree in parse_tree_incr(in_file) {
+        token_trees.push(token_tree?);
+    }
+    Ok(token_trees)
+}
+
+pub fn parse_tree_incr<R: io::BufRead>(
+    in_file: R,
+) -> impl Iterator<Item = Result<TokenTree, io::Error>> {
+    TokenTreeGenerator {
+        sent_iter: SentenceGenerator {
+            sentences: parse_sentences(in_file),
+            global_columns: vec![],
+        },
     }
 }
 
@@ -62,45 +81,21 @@ impl<R: io::BufRead> Iterator for SentenceGenerator<R> {
     }
 }
 
-// pub fn parse_sentences<R: io::BufRead>(in_file: R) -> SentenceIter<R> {
-//     SentenceIter {
-//         lines: in_file.lines(),
-//         buf: Vec::new(),
-//     }
-// }
-//
-// fn parse_token_and_metadata()
-//
-// struct SentenceIter<R: io::BufRead> {
-//     lines: Lines<R>,
-//     buf: Vec<String>,
-// }
-//
-// impl<R: io::BufRead> Iterator for SentenceIter<R> {
-//     type Item = Result<Vec<String>, io::Error>;
-//
-//     fn next(&mut self) -> Option<Self::Item> {
-//         loop {
-//             if let Some(line) = self.lines.next() {
-//                 let line = match line {
-//                     Ok(x) => x,
-//                     Err(err) => return Some(Err(err)),
-//                 };
-//                 if line.trim().is_empty() {
-//                     if self.buf.is_empty() {
-//                         continue;
-//                     }
-//                     return Some(Ok(mem::take(&mut self.buf)));
-//                 } else {
-//                     self.buf.push(line);
-//                 }
-//             } else {
-//                 break;
-//             }
-//         }
-//         if !self.buf.is_empty() {
-//             return Some(Ok(mem::take(&mut self.buf)));
-//         }
-//         None
-//     }
-// }
+struct TokenTreeGenerator<R: io::BufRead> {
+    sent_iter: SentenceGenerator<R>,
+}
+
+impl<R: io::BufRead> Iterator for TokenTreeGenerator<R> {
+    type Item = Result<TokenTree, io::Error>;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        if let Some(sentence) = self.sent_iter.next() {
+            match sentence {
+                Ok(sentence) => Some(Ok(sentence.to_tree().unwrap())),
+                Err(err) => Some(Err(err)),
+            }
+        } else {
+            None
+        }
+    }
+}

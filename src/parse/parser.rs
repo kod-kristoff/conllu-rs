@@ -196,7 +196,7 @@ fn parse_dict_value(value: &str) -> Option<Dict<String, String>> {
     if dict.is_empty() { None } else { Some(dict) }
 }
 
-fn parse_int_value(value: &str) -> Option<u8> {
+fn parse_int_value(value: &str) -> Option<i16> {
     if value == "_" {
         return None;
     }
