@@ -1,0 +1,492 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "Over",
+                lemma: Some(
+                    "over",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "300",
+                lemma: Some(
+                    "300",
+                ),
+                upos: Some(
+                    "NUM",
+                ),
+                xpos: Some(
+                    "CD",
+                ),
+                feats: Some(
+                    {
+                        "NumType": "Card",
+                    },
+                ),
+                head: Some(
+                    3,
+                ),
+                deprel: Some(
+                    "nummod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nummod",
+                            3,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "Iraqis",
+                lemma: Some(
+                    "Iraqis",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNPS",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Plur",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "nsubj:pass",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj:pass",
+                            5,
+                        ),
+                        (
+                            "nsubj:xsubj",
+                            6,
+                        ),
+                        (
+                            "nsubj:pass",
+                            8,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "are",
+                lemma: Some(
+                    "be",
+                ),
+                upos: Some(
+                    "AUX",
+                ),
+                xpos: Some(
+                    "VBP",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "aux:pass",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "aux:pass",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "reported",
+                lemma: Some(
+                    "report",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBN",
+                ),
+                feats: Some(
+                    {
+                        "Tense": "Past",
+                        "VerbForm": "Part",
+                        "Voice": "Pass",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "dead",
+                lemma: Some(
+                    "dead",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "xcomp",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "xcomp",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "and",
+                lemma: Some(
+                    "and",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: Some(
+                    "CC",
+                ),
+                feats: None,
+                head: Some(
+                    8,
+                ),
+                deprel: Some(
+                    "cc",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "cc",
+                            8,
+                        ),
+                        (
+                            "cc",
+                            8.1,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "500",
+                lemma: Some(
+                    "500",
+                ),
+                upos: Some(
+                    "NUM",
+                ),
+                xpos: Some(
+                    "CD",
+                ),
+                feats: Some(
+                    {
+                        "NumType": "Card",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "conj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "conj:and",
+                            5,
+                        ),
+                        (
+                            "nsubj:pass",
+                            8.1,
+                        ),
+                        (
+                            "nsubj:xsubj",
+                            9,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 8.1,
+                form: "reported",
+                lemma: Some(
+                    "report",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBN",
+                ),
+                feats: Some(
+                    {
+                        "Tense": "Past",
+                        "VerbForm": "Part",
+                        "Voice": "Pass",
+                    },
+                ),
+                head: None,
+                deprel: None,
+                deps: Some(
+                    [
+                        (
+                            "conj:and",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "CopyOf": "5",
+                    },
+                ),
+            },
+            Token {
+                id: 9,
+                form: "wounded",
+                lemma: Some(
+                    "wounded",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    8,
+                ),
+                deprel: Some(
+                    "orphan",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "xcomp",
+                            8.1,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 10,
+                form: "in",
+                lemma: Some(
+                    "in",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    11,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            11,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 11,
+                form: "Fallujah",
+                lemma: Some(
+                    "Fallujah",
+                ),
+                upos: Some(
+                    "PROPN",
+                ),
+                xpos: Some(
+                    "NNP",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "obl",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "obl:in",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 12,
+                form: "alone",
+                lemma: Some(
+                    "alone",
+                ),
+                upos: Some(
+                    "ADV",
+                ),
+                xpos: Some(
+                    "RB",
+                ),
+                feats: None,
+                head: Some(
+                    11,
+                ),
+                deprel: Some(
+                    "advmod",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "advmod",
+                            11,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 13,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            5,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: [
+            Metadata {
+                key: "sent_id",
+                value: "weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022",
+            },
+            Metadata {
+                key: "text",
+                value: "Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.",
+            },
+        ],
+    },
+]

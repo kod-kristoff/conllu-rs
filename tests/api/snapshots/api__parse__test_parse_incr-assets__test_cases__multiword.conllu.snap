@@ -100,6 +100,6 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: {},
+        metadata: [],
     },
 ]

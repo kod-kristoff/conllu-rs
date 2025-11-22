@@ -1,0 +1,278 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "The",
+                lemma: Some(
+                    "the",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Def",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "quick",
+                lemma: Some(
+                    "quick",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "brown",
+                lemma: Some(
+                    "brown",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "fox",
+                lemma: Some(
+                    "fox",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 5,
+                form: "jumps",
+                lemma: Some(
+                    "jump",
+                ),
+                upos: Some(
+                    "VERB",
+                ),
+                xpos: Some(
+                    "VBZ",
+                ),
+                feats: Some(
+                    {
+                        "Mood": "Ind",
+                        "Number": "Sing",
+                        "Person": "3",
+                        "Tense": "Pres",
+                        "VerbForm": "Fin",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 6,
+                form: "over",
+                lemma: Some(
+                    "over",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: Some(
+                    "IN",
+                ),
+                feats: None,
+                head: Some(
+                    9,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 7,
+                form: "the",
+                lemma: Some(
+                    "the",
+                ),
+                upos: Some(
+                    "DET",
+                ),
+                xpos: Some(
+                    "DT",
+                ),
+                feats: Some(
+                    {
+                        "Definite": "Def",
+                        "PronType": "Art",
+                    },
+                ),
+                head: Some(
+                    9,
+                ),
+                deprel: Some(
+                    "det",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 8,
+                form: "lazy",
+                lemma: Some(
+                    "lazy",
+                ),
+                upos: Some(
+                    "ADJ",
+                ),
+                xpos: Some(
+                    "JJ",
+                ),
+                feats: Some(
+                    {
+                        "Degree": "Pos",
+                    },
+                ),
+                head: Some(
+                    9,
+                ),
+                deprel: Some(
+                    "amod",
+                ),
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 9,
+                form: "dog",
+                lemma: Some(
+                    "dog",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: Some(
+                    "NN",
+                ),
+                feats: Some(
+                    {
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "nmod",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 10,
+                form: ".",
+                lemma: Some(
+                    ".",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: Some(
+                    ".",
+                ),
+                feats: None,
+                head: Some(
+                    5,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: None,
+                misc: None,
+            },
+        ],
+        metadata: [
+            Metadata {
+                key: "text",
+                value: "The quick brown fox jumps over the lazy dog.",
+            },
+        ],
+    },
+]
