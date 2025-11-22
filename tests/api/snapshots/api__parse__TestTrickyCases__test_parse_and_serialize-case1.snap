@@ -1,0 +1,189 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1,
+                form: "-",
+                lemma: Some(
+                    "-",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    2,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            2,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2,
+                form: "Я",
+                lemma: Some(
+                    "я",
+                ),
+                upos: Some(
+                    "PRON",
+                ),
+                xpos: None,
+                feats: Some(
+                    {
+                        "Case": "Nom",
+                        "Number": "Sing",
+                        "Person": "1",
+                    },
+                ),
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "nsubj",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "nsubj",
+                            2.1,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 2.1,
+                form: "_",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: Some(
+                    [
+                        (
+                            "exroot",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 3,
+                form: "насчет",
+                lemma: Some(
+                    "насчет",
+                ),
+                upos: Some(
+                    "ADP",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "case",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "case",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+            Token {
+                id: 4,
+                form: "работы",
+                lemma: Some(
+                    "работа",
+                ),
+                upos: Some(
+                    "NOUN",
+                ),
+                xpos: None,
+                feats: Some(
+                    {
+                        "Animacy": "Inan",
+                        "Case": "Gen",
+                        "Gender": "Fem",
+                        "Number": "Sing",
+                    },
+                ),
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "root",
+                            0,
+                        ),
+                    ],
+                ),
+                misc: Some(
+                    {
+                        "SpaceAfter": "No",
+                    },
+                ),
+            },
+            Token {
+                id: 5,
+                form: "…",
+                lemma: Some(
+                    "…",
+                ),
+                upos: Some(
+                    "PUNCT",
+                ),
+                xpos: None,
+                feats: None,
+                head: Some(
+                    4,
+                ),
+                deprel: Some(
+                    "punct",
+                ),
+                deps: Some(
+                    [
+                        (
+                            "punct",
+                            4,
+                        ),
+                    ],
+                ),
+                misc: None,
+            },
+        ],
+        metadata: [
+            Comment(
+                "example taken from ru_syntagrus UD2.0",
+            ),
+            Comment(
+                "2003Anketa.xml 45",
+            ),
+        ],
+    },
+]

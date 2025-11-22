@@ -1,0 +1,91 @@
+---
+source: tests/api/parse.rs
+expression: sentences
+---
+[
+    Sentence {
+        tokens: [
+            Token {
+                id: 1-2,
+                form: "ويشارك",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: None,
+                deprel: None,
+                deps: None,
+                misc: None,
+            },
+            Token {
+                id: 1,
+                form: "و",
+                lemma: Some(
+                    "و\u{64e}",
+                ),
+                upos: Some(
+                    "CCONJ",
+                ),
+                xpos: Some(
+                    "C---------",
+                ),
+                feats: None,
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "Vform": "و\u{64e}",
+                        "Gloss": "and",
+                        "Root": "wa",
+                        "Translit": "wa",
+                        "LTranslit": "wa",
+                    },
+                ),
+            },
+            Token {
+                id: 19,
+                form: "آلافكار",
+                lemma: Some(
+                    "آلافكار",
+                ),
+                upos: Some(
+                    "X",
+                ),
+                xpos: Some(
+                    "U---------",
+                ),
+                feats: None,
+                head: Some(
+                    1,
+                ),
+                deprel: Some(
+                    "nmod",
+                ),
+                deps: None,
+                misc: Some(
+                    {
+                        "Vform": "آلافكار",
+                        "Translit": "lAfkAr",
+                    },
+                ),
+            },
+        ],
+        metadata: [
+            Comment(
+                "example taken from arabic UD2.0",
+            ),
+            Metadata {
+                key: "sent_id",
+                value: "ummah.20040705.0014:p6u1",
+            },
+            Comment(
+                "removed not needed words",
+            ),
+        ],
+    },
+]
