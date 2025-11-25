@@ -406,16 +406,18 @@ expression: sentences
                 ),
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "aja_ee200110_3121",
-            },
-            Metadata {
-                key: "text",
-                value: "Moodymanni ehk Kenny Dixon Jnr võid näha ja lausa liigutamas aadressil proto.groovetech.com/mk-demf.rxml?file=/demf/mainstage/day2/mainstageday2-kennydixonjr.rm",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "aja_ee200110_3121",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Moodymanni ehk Kenny Dixon Jnr võid näha ja lausa liigutamas aadressil proto.groovetech.com/mk-demf.rxml?file=/demf/mainstage/day2/mainstageday2-kennydixonjr.rm",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -554,16 +556,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "aja_ee200110_3122",
-            },
-            Metadata {
-                key: "text",
-                value: "(Antes Edition)",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "aja_ee200110_3122",
+                },
+                Metadata {
+                    key: "text",
+                    value: "(Antes Edition)",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -1242,15 +1246,17 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "aja_ee200110_3123",
-            },
-            Metadata {
-                key: "text",
-                value: "Filmimuusika loomine on mitmes mõttes erinev kontserdisaalis ette kantava teose kirjutamisest, sisaldades nii kitsendusi kui ka ahvatlevaid võimalusi.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "aja_ee200110_3123",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Filmimuusika loomine on mitmes mõttes erinev kontserdisaalis ette kantava teose kirjutamisest, sisaldades nii kitsendusi kui ka ahvatlevaid võimalusi.",
+                },
+            ],
+        },
     },
 ]

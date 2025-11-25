@@ -75,17 +75,19 @@ expression: sentences
                 ),
             },
         ],
-        metadata: [
-            Comment(
-                "example taken from arabic UD2.0",
-            ),
-            Metadata {
-                key: "sent_id",
-                value: "ummah.20040705.0014:p6u1",
-            },
-            Comment(
-                "removed not needed words",
-            ),
-        ],
+        metadata: Metadata {
+            store: [
+                Comment(
+                    "example taken from arabic UD2.0",
+                ),
+                Metadata {
+                    key: "sent_id",
+                    value: "ummah.20040705.0014:p6u1",
+                },
+                Comment(
+                    "removed not needed words",
+                ),
+            ],
+        },
     },
 ]

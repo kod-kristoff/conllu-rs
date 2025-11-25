@@ -92,7 +92,9 @@ expression: sentences
                             misc: None,
                         },
                         children: [],
-                        metadata: [],
+                        metadata: Metadata {
+                            store: [],
+                        },
                     },
                     TokenTree {
                         token: Token {
@@ -122,7 +124,9 @@ expression: sentences
                             misc: None,
                         },
                         children: [],
-                        metadata: [],
+                        metadata: Metadata {
+                            store: [],
+                        },
                     },
                     TokenTree {
                         token: Token {
@@ -152,10 +156,14 @@ expression: sentences
                             misc: None,
                         },
                         children: [],
-                        metadata: [],
+                        metadata: Metadata {
+                            store: [],
+                        },
                     },
                 ],
-                metadata: [],
+                metadata: Metadata {
+                    store: [],
+                },
             },
             TokenTree {
                 token: Token {
@@ -213,7 +221,9 @@ expression: sentences
                             misc: None,
                         },
                         children: [],
-                        metadata: [],
+                        metadata: Metadata {
+                            store: [],
+                        },
                     },
                     TokenTree {
                         token: Token {
@@ -244,7 +254,9 @@ expression: sentences
                             misc: None,
                         },
                         children: [],
-                        metadata: [],
+                        metadata: Metadata {
+                            store: [],
+                        },
                     },
                     TokenTree {
                         token: Token {
@@ -274,10 +286,14 @@ expression: sentences
                             misc: None,
                         },
                         children: [],
-                        metadata: [],
+                        metadata: Metadata {
+                            store: [],
+                        },
                     },
                 ],
-                metadata: [],
+                metadata: Metadata {
+                    store: [],
+                },
             },
             TokenTree {
                 token: Token {
@@ -303,14 +319,18 @@ expression: sentences
                     misc: None,
                 },
                 children: [],
-                metadata: [],
+                metadata: Metadata {
+                    store: [],
+                },
             },
         ],
-        metadata: [
-            Metadata {
-                key: "text",
-                value: "The quick brown fox jumps over the lazy dog.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "text",
+                    value: "The quick brown fox jumps over the lazy dog.",
+                },
+            ],
+        },
     },
 ]

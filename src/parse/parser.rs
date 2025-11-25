@@ -1,175 +1,8 @@
-use std::{
-    io::{self, Lines},
-    mem,
-    sync::LazyLock,
-};
+use std::{fmt, str::FromStr};
 
-use regex::Regex;
+use crate::models::{Dict, Id, ParseIdError};
 
-use crate::models::{Dict, Id, MetadataOrComment, Sentence, Token};
-
-const DEFAULT_FIELDS: &[&str] = &[
-    "id", "form", "lemma", "upos", "xpos", "feats", "head", "deprel", "deps", "misc",
-];
-// static DEFAULT_METADATA_PARSERS: LazyLock<Dict<&str, Fn(&str, &str) -> (String, String)>> =
-//     LazyLock::new(|| {
-//         Dict::from_iter(&[
-//             ("newpar", |key, value| (key.to_string(), value.to_string())),
-//             ("newdoc", |key, value| (key.to_string(), value.to_string())),
-//         ])
-//     });
-
-pub fn parse_sentences<R: io::BufRead>(in_file: R) -> SentenceIter<R> {
-    SentenceIter {
-        lines: in_file.lines(),
-        buf: Vec::new(),
-    }
-}
-
-pub(super) fn parse_token_and_metadata(
-    metadata_lines: Vec<String>,
-    token_lines: Vec<String>,
-) -> Sentence {
-    let mut tokens = vec![];
-    let mut metadata = Vec::new();
-
-    for line in metadata_lines {
-        for (key, value) in parse_comment_line(line) {
-            if let Some(value) = value {
-                metadata.push(MetadataOrComment::Metadata { key, value });
-            } else {
-                metadata.push(MetadataOrComment::Comment(key));
-            }
-        }
-    }
-    for line in token_lines {
-        tokens.push(parse_line(line));
-    }
-    Sentence::new(tokens, metadata)
-}
-
-fn parse_line(line: String) -> Token {
-    static TAB_OR_2SPACES: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\t| {2,}").unwrap());
-    let mut line_split = TAB_OR_2SPACES.split(&line);
-    // if line_split.len() == 1 {
-    //     todo!("Error: Invalid line format");
-    // }
-
-    let Some(id) = line_split.next().and_then(parse_id_value) else {
-        todo!("Empty line");
-    };
-    let Some(form) = line_split.next().map(ToString::to_string) else {
-        todo!("Invalid line format");
-    };
-    let Some(lemma) = line_split
-        .next()
-        .map(|s| parse_nullable_value(s).map(ToString::to_string))
-    else {
-        todo!("Invalid line format");
-    };
-    let upos = line_split
-        .next()
-        .and_then(parse_nullable_value)
-        .map(ToString::to_string);
-    // else {
-    //     todo!("Invalid line format");
-    // };
-    let xpos = line_split
-        .next()
-        .and_then(parse_nullable_value)
-        .map(ToString::to_string);
-    let feats = line_split.next().and_then(parse_dict_value);
-    let head = line_split.next().and_then(parse_int_value);
-    let deprel = line_split
-        .next()
-        .and_then(parse_nullable_value)
-        .map(ToString::to_string);
-    let deps = line_split.next().and_then(parse_paired_list_value);
-    let misc = line_split.next().and_then(parse_dict_value);
-
-    Token::new(id, form, lemma, upos, xpos, feats, head, deprel, deps, misc)
-}
-fn parse_comment_line(line: String) -> Vec<(String, Option<String>)> {
-    let (key, value) = parse_pair_value(line);
-    if key.is_empty() {
-        vec![]
-    } else {
-        vec![(key, value)]
-    }
-}
-
-fn parse_pair_value(line: String) -> (String, Option<String>) {
-    let mut key_maybe_value = line.splitn(2, '=');
-    let key = key_maybe_value.next().unwrap().trim().to_string();
-    let value = key_maybe_value.next().map(|s| s.trim().to_string());
-    (key, value)
-}
-pub(super) struct SentenceIter<R: io::BufRead> {
-    lines: Lines<R>,
-    buf: Vec<String>,
-}
-
-impl<R: io::BufRead> Iterator for SentenceIter<R> {
-    type Item = Result<Vec<String>, io::Error>;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        loop {
-            if let Some(line) = self.lines.next() {
-                let line = match line {
-                    Ok(x) => x,
-                    Err(err) => return Some(Err(err)),
-                };
-                if line.trim().is_empty() {
-                    if self.buf.is_empty() {
-                        continue;
-                    }
-                    return Some(Ok(mem::take(&mut self.buf)));
-                } else {
-                    self.buf.push(line);
-                }
-            } else {
-                break;
-            }
-        }
-        if !self.buf.is_empty() {
-            return Some(Ok(mem::take(&mut self.buf)));
-        }
-        None
-    }
-}
-const ID_SINGLE_PATTERN: &str = r"(?:0|[1-9][0-9]*)";
-const ID_RANGE_PATTERN: &str = r"[1-9][0-9]*\-[1-9][0-9]*";
-const ID_DOT_ID_PATTERN: &str = r"[0-9][0-9]*\.[1-9][0-9]*";
-static ID_SINGLE: LazyLock<Regex> = LazyLock::new(|| Regex::new(ID_SINGLE_PATTERN).unwrap());
-static ID_RANGE: LazyLock<Regex> = LazyLock::new(|| Regex::new(ID_RANGE_PATTERN).unwrap());
-static ID_DOT_ID: LazyLock<Regex> = LazyLock::new(|| Regex::new(ID_DOT_ID_PATTERN).unwrap());
-
-fn parse_id_value(value: &str) -> Option<Id> {
-    // if value.is_empty() || value == "_" {
-    //     return None;
-    // }
-
-    if ID_RANGE.is_match(value) {
-        let mut ids = value.split('-');
-        let from = ids.next().unwrap().parse().unwrap();
-        let to = ids.next().unwrap().parse().unwrap();
-        Some(Id::Range(from, to))
-    } else if ID_DOT_ID.is_match(value) {
-        let mut ids = value.split('.');
-        let major = ids.next().unwrap().parse().unwrap();
-        let minor = ids.next().unwrap().parse().unwrap();
-        Some(Id::Dot(major, minor))
-    } else if ID_SINGLE.is_match(value) {
-        match value.parse() {
-            Ok(id) => Some(Id::Single(id)),
-            Err(err) => todo!("handle parse error: {}", err),
-        }
-    } else {
-        None
-    }
-}
-
-fn parse_nullable_value(value: &str) -> Option<&str> {
+pub fn parse_nullable_value(value: &str) -> Option<&str> {
     if value.is_empty() || value == "_" {
         None
     } else {
@@ -177,7 +10,7 @@ fn parse_nullable_value(value: &str) -> Option<&str> {
     }
 }
 
-fn parse_dict_value(value: &str) -> Option<Dict<String, String>> {
+pub fn parse_dict_value(value: &str) -> Option<Dict<String, String>> {
     parse_nullable_value(value)?;
     let mut dict = Dict::new();
 
@@ -196,36 +29,89 @@ fn parse_dict_value(value: &str) -> Option<Dict<String, String>> {
     if dict.is_empty() { None } else { Some(dict) }
 }
 
-fn parse_int_value(value: &str) -> Option<i16> {
+pub fn parse_from_str_nullable<F: FromStr>(value: &str) -> Result<Option<F>, F::Err> {
     if value == "_" {
-        return None;
+        return Ok(None);
     }
 
     match value.parse() {
-        Ok(num) => Some(num),
-        Err(err) => todo!("handle err {}", err),
+        Ok(v) => Ok(Some(v)),
+        Err(err) => Err(err),
     }
 }
 
-fn parse_paired_list_value(value: &str) -> Option<Vec<(String, Id)>> {
+#[derive(Debug)]
+pub enum ParsePairedListError {
+    MissingColon(String),
+    ParseId(ParseIdError),
+}
+
+impl From<ParseIdError> for ParsePairedListError {
+    fn from(value: ParseIdError) -> Self {
+        Self::ParseId(value)
+    }
+}
+
+impl fmt::Display for ParsePairedListError {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        match self {
+            Self::MissingColon(val) => write!(f, "Missing `:` in '{}'", val),
+            Self::ParseId(_err) => f.write_str("Failed to parse id"),
+        }
+    }
+}
+
+impl std::error::Error for ParsePairedListError {
+    fn source(&self) -> Option<&(dyn std::error::Error + 'static)> {
+        match self {
+            Self::ParseId(err) => Some(err),
+            _ => None,
+        }
+    }
+}
+
+pub fn parse_paired_list_value(
+    value: &str,
+) -> Result<Option<Vec<(String, Id)>>, ParsePairedListError> {
     if value == "_" {
-        return None;
+        return Ok(None);
     }
     let mut list = Vec::new();
     for part in value.split('|') {
-        let id_dep = part.split_once(':');
-        let Some(id) = id_dep.map(|x| x.0) else {
-            todo!("handle empty")
-            // return Some(vec![(value.to_string(), None)]);
+        let Some((id, dep)) = part.split_once(':') else {
+            return Err(ParsePairedListError::MissingColon(value.into()));
         };
-        let Some(dep) = id_dep.map(|x| x.1) else {
-            todo!("handle no : in '{value}'")
-            // return Some(vec![(value.to_string(), None)]);
-        };
-        let Some(id) = parse_id_value(id) else {
-            todo!("handle bad id in '{value}'")
-        };
-        list.push((dep.to_string(), id));
+
+        list.push((dep.to_string(), id.parse()?));
     }
-    if list.is_empty() { None } else { Some(list) }
+    Ok(if list.is_empty() { None } else { Some(list) })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    mod parse_paired_list_value {
+        use std::error::Error;
+
+        use rstest::rstest;
+
+        use super::*;
+        #[rstest]
+        #[case::no_colon("no_colon")]
+        #[case::bad_id("k:nsubj")]
+        fn malformed_value_returns_error(#[case] v: &str) {
+            let actual = parse_paired_list_value(v).unwrap_err();
+            insta::assert_snapshot!(
+                format!("malformed_value_returns_error-{}", v.replace(':', "_")),
+                actual
+            );
+            insta::assert_snapshot!(
+                format!(
+                    "malformed_value_returns_error-{}-source",
+                    v.replace(':', "_")
+                ),
+                actual.source().map(ToString::to_string).unwrap_or_default()
+            );
+        }
+    }
 }

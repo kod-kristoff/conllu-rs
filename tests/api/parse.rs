@@ -1,6 +1,6 @@
 use std::{fs::File, io};
 
-use conllu::{models::Sentence, parse, parse_incr};
+use conllu::{models::Sentence, parse};
 use rstest::rstest;
 
 #[rstest]
@@ -14,14 +14,41 @@ use rstest::rstest;
 fn test_parse_incr(#[case] case_path: &str) -> eyre::Result<()> {
     let file = File::open(case_path)?;
     let rdr = io::BufReader::new(file);
-    let sentences = parse(rdr)?;
+    let sentences: Vec<Sentence> = parse(rdr)?;
 
     insta::assert_debug_snapshot!(format!("test_parse_incr-{case_path}"), sentences);
     Ok(())
 }
 
+#[rstest]
+fn empty_source_files() -> eyre::Result<()> {
+    let res: Result<Vec<Sentence>, conllu::de::DeError> = parse("".as_bytes());
+
+    insta::assert_debug_snapshot!(res);
+    Ok(())
+}
+mod failures {
+    use conllu::{models::Sentence, parse_tree};
+    use rstest::rstest;
+
+    #[rstest]
+    #[case::no_tokens("# sent_id = 1")]
+    #[case::no_form("# sent_id = 2\n1")]
+    #[case::bad_id("# sent_id = 3\nk")]
+    fn bad_source_files(#[case] data: &str) -> eyre::Result<()> {
+        let res = parse_tree::<Sentence, _>(data.as_bytes());
+
+        insta::assert_debug_snapshot!(
+            format!("failures_bad_source_files-data-{}", data.replace('\n', "_")),
+            res
+        );
+        Ok(())
+    }
+}
+
+#[allow(non_snake_case)]
 mod TestParse {
-    use conllu::{parse, parse_tree};
+    use conllu::{models::Sentence, parse, parse_tree};
     use rstest::{fixture, rstest};
 
     use crate::fixtures;
@@ -33,17 +60,20 @@ mod TestParse {
 
     #[rstest]
     fn test_parse(data: &str) -> eyre::Result<()> {
-        let sentences = parse(data.as_bytes())?;
+        let sentences: Vec<Sentence> = parse(data.as_bytes())?;
         insta::assert_debug_snapshot!(sentences);
+        assert!(sentences[0].metadata().get("text").is_some());
         Ok(())
     }
 
     #[rstest]
     fn test_parse_tree(data: &str) -> eyre::Result<()> {
-        let sentences = parse_tree(data.as_bytes())?;
+        println!("data={}", data);
+        let sentences = parse_tree::<Sentence, _>(data.as_bytes())?;
         insta::assert_debug_snapshot!(sentences);
 
         let root = &sentences[0];
+        println!("root={:?}", &root);
         let mut buf = Vec::new();
 
         root.print_tree(&mut buf, 0)?;
@@ -54,6 +84,7 @@ mod TestParse {
     }
 }
 
+#[allow(non_snake_case)]
 mod TestTrickyCases {
     use std::io::{self, Cursor};
 
@@ -71,7 +102,7 @@ mod TestTrickyCases {
     #[case::english(2)]
     fn test_parse_and_serialize(#[case] i: usize) -> eyre::Result<()> {
         let testcase = TESTCASES[i];
-        let sentences = parse(testcase.as_bytes())?;
+        let sentences: Vec<Sentence> = parse(testcase.as_bytes())?;
         insta::assert_debug_snapshot!(format!("test_parse_and_serialize-case{i}"), sentences);
 
         let mut wrtr = io::Cursor::new(vec![]);
@@ -91,7 +122,7 @@ mod TestTrickyCases {
     #[case::english(2)]
     fn test_parse_tree_and_serialize(#[case] i: usize) -> eyre::Result<()> {
         let testcase = TESTCASES[i];
-        let data = parse(testcase.as_bytes())?;
+        let data: Vec<Sentence> = parse(testcase.as_bytes())?;
         let tokens = data[0]
             .tokens()
             .iter()
@@ -100,7 +131,7 @@ mod TestTrickyCases {
             .collect();
 
         let testcase_without_range_and_elided = Sentence::new(tokens, data[0].metadata().clone());
-        let actual = parse_tree(testcase.as_bytes())?[0].clone();
+        let actual = parse_tree::<Sentence, _>(testcase.as_bytes())?[0].clone();
         let mut buf = Cursor::new(Vec::new());
         let actual = actual.into_sentence();
         actual.serialize(&mut buf)?;

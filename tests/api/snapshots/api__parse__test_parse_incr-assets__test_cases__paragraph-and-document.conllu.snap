@@ -177,27 +177,29 @@ expression: sentences
                 ),
             },
         ],
-        metadata: [
-            Metadata {
-                key: "newdoc id",
-                value: "mf920901-001",
-            },
-            Metadata {
-                key: "newpar id",
-                value: "mf920901-001-p1",
-            },
-            Metadata {
-                key: "sent_id",
-                value: "mf920901-001-p1s1A",
-            },
-            Metadata {
-                key: "text",
-                value: "Slovenská ústava: pro i proti",
-            },
-            Metadata {
-                key: "text_en",
-                value: "Slovak constitution: pros and cons",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "newdoc id",
+                    value: "mf920901-001",
+                },
+                Metadata {
+                    key: "newpar id",
+                    value: "mf920901-001-p1",
+                },
+                Metadata {
+                    key: "sent_id",
+                    value: "mf920901-001-p1s1A",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Slovenská ústava: pro i proti",
+                },
+                Metadata {
+                    key: "text_en",
+                    value: "Slovak constitution: pros and cons",
+                },
+            ],
+        },
     },
 ]

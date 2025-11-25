@@ -177,13 +177,15 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Comment(
-                "example taken from ru_syntagrus UD2.0",
-            ),
-            Comment(
-                "2003Anketa.xml 45",
-            ),
-        ],
+        metadata: Metadata {
+            store: [
+                Comment(
+                    "example taken from ru_syntagrus UD2.0",
+                ),
+                Comment(
+                    "2003Anketa.xml 45",
+                ),
+            ],
+        },
     },
 ]

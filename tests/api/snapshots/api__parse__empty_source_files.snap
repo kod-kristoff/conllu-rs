@@ -1,0 +1,7 @@
+---
+source: tests/api/parse.rs
+expression: res
+---
+Ok(
+    [],
+)

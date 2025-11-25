@@ -242,24 +242,26 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "newdoc id",
-                value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200",
-            },
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0001",
-            },
-            Metadata {
-                key: "newpar id",
-                value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-p0001",
-            },
-            Metadata {
-                key: "text",
-                value: "What if Google Morphed Into GoogleOS?",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "newdoc id",
+                    value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200",
+                },
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0001",
+                },
+                Metadata {
+                    key: "newpar id",
+                    value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-p0001",
+                },
+                Metadata {
+                    key: "text",
+                    value: "What if Google Morphed Into GoogleOS?",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -1034,16 +1036,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0002",
-            },
-            Metadata {
-                key: "text",
-                value: "What if Google expanded on its search-engine (and now e-mail) wares into a full-fledged operating system?",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0002",
+                },
+                Metadata {
+                    key: "text",
+                    value: "What if Google expanded on its search-engine (and now e-mail) wares into a full-fledged operating system?",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -1333,16 +1337,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0003",
-            },
-            Metadata {
-                key: "text",
-                value: "[via Microsoft Watch from Mary Jo Foley ]",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_zentelligence_20040423000200_ENG_20040423_000200-0003",
+                },
+                Metadata {
+                    key: "text",
+                    value: "[via Microsoft Watch from Mary Jo Foley ]",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -2176,24 +2182,26 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "newdoc id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700",
-            },
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0001",
-            },
-            Metadata {
-                key: "newpar id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-p0001",
-            },
-            Metadata {
-                key: "text",
-                value: "(And, by the way, is anybody else just a little nostalgic for the days when that was a good thing?)",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "newdoc id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700",
+                },
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0001",
+                },
+                Metadata {
+                    key: "newpar id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-p0001",
+                },
+                Metadata {
+                    key: "text",
+                    value: "(And, by the way, is anybody else just a little nostalgic for the days when that was a good thing?)",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -3257,16 +3265,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0002",
-            },
-            Metadata {
-                key: "text",
-                value: "This BuzzMachine post argues that Google's rush toward ubiquity might backfire -- which we've all heard before, but it's particularly well-put in this post.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0002",
+                },
+                Metadata {
+                    key: "text",
+                    value: "This BuzzMachine post argues that Google's rush toward ubiquity might backfire -- which we've all heard before, but it's particularly well-put in this post.",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -3507,16 +3517,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0003",
-            },
-            Metadata {
-                key: "text",
-                value: "Google is a nice search engine.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0003",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Google is a nice search engine.",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -3792,16 +3804,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0004",
-            },
-            Metadata {
-                key: "text",
-                value: "Does anybody use it for anything else?",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0004",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Does anybody use it for anything else?",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -4044,16 +4058,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0005",
-            },
-            Metadata {
-                key: "text",
-                value: "They own blogger, of course.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0005",
+                },
+                Metadata {
+                    key: "text",
+                    value: "They own blogger, of course.",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -4264,16 +4280,18 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0006",
-            },
-            Metadata {
-                key: "text",
-                value: "Is that a money maker?",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0006",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Is that a money maker?",
+                },
+            ],
+        },
     },
     Sentence {
         tokens: [
@@ -4555,19 +4573,21 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0007",
-            },
-            Metadata {
-                key: "newpar id",
-                value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-p0002",
-            },
-            Metadata {
-                key: "text",
-                value: "I'm staying away from the stock.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-0007",
+                },
+                Metadata {
+                    key: "newpar id",
+                    value: "weblog-blogspot.com_marketview_20050511222700_ENG_20050511_222700-p0002",
+                },
+                Metadata {
+                    key: "text",
+                    value: "I'm staying away from the stock.",
+                },
+            ],
+        },
     },
 ]
