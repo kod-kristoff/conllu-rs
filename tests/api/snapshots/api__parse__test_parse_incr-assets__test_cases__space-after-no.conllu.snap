@@ -298,6 +298,8 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [],
+        metadata: Metadata {
+            store: [],
+        },
     },
 ]

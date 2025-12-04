@@ -268,11 +268,13 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "text",
-                value: "The quick brown fox jumps over the lazy dog.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "text",
+                    value: "The quick brown fox jumps over the lazy dog.",
+                },
+            ],
+        },
     },
 ]

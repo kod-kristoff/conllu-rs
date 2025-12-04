@@ -1,0 +1,69 @@
+---
+source: src/models.rs
+expression: res
+---
+TokenTree {
+    token: Token {
+        id: 0,
+        form: "_",
+        lemma: None,
+        upos: None,
+        xpos: None,
+        feats: None,
+        head: None,
+        deprel: Some(
+            "root",
+        ),
+        deps: None,
+        misc: None,
+    },
+    children: [
+        TokenTree {
+            token: Token {
+                id: 1,
+                form: "form1",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: None,
+                misc: None,
+            },
+            children: [],
+            metadata: Metadata {
+                store: [],
+            },
+        },
+        TokenTree {
+            token: Token {
+                id: 2,
+                form: "form2",
+                lemma: None,
+                upos: None,
+                xpos: None,
+                feats: None,
+                head: Some(
+                    0,
+                ),
+                deprel: Some(
+                    "root",
+                ),
+                deps: None,
+                misc: None,
+            },
+            children: [],
+            metadata: Metadata {
+                store: [],
+            },
+        },
+    ],
+    metadata: Metadata {
+        store: [],
+    },
+}

@@ -514,15 +514,17 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "sv-ud-train-477",
-            },
-            Metadata {
-                key: "text",
-                value: "På högstadiet skall varje elev välja ett av fyra tillvalsämnen: * språk (franska eller tyska) * ekonomi * teknik * konst",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "sv-ud-train-477",
+                },
+                Metadata {
+                    key: "text",
+                    value: "På högstadiet skall varje elev välja ett av fyra tillvalsämnen: * språk (franska eller tyska) * ekonomi * teknik * konst",
+                },
+            ],
+        },
     },
 ]

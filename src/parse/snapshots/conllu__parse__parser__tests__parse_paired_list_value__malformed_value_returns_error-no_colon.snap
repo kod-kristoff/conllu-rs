@@ -1,0 +1,5 @@
+---
+source: src/parse/parser.rs
+expression: actual
+---
+Missing `:` in 'no_colon'

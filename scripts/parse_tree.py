@@ -37,6 +37,9 @@ def parse_tree(case_path: Path) -> None:
     with case_path.open(encoding="utf-8") as fp:
         for token_tree in conllu.parse_tree_incr(fp):
             token_tree.print_tree()
+    with case_path.open(encoding="utf-8") as fp:
+        for sentence in conllu.parse_incr(fp):
+            print(sentence.serialize())
 
 
 def dump_snap(case_path: Path) -> None:

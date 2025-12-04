@@ -478,15 +478,17 @@ expression: sentences
                 misc: None,
             },
         ],
-        metadata: [
-            Metadata {
-                key: "sent_id",
-                value: "weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022",
-            },
-            Metadata {
-                key: "text",
-                value: "Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.",
-            },
-        ],
+        metadata: Metadata {
+            store: [
+                Metadata {
+                    key: "sent_id",
+                    value: "weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022",
+                },
+                Metadata {
+                    key: "text",
+                    value: "Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.",
+                },
+            ],
+        },
     },
 ]

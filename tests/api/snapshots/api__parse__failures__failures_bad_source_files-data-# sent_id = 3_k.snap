@@ -1,0 +1,12 @@
+---
+source: tests/api/parse.rs
+expression: res
+---
+Err(
+    DeError(
+        InvalidValue(
+            "id",
+            "Failed to parse as id: Unsupported id form: 'k'",
+        ),
+    ),
+)
